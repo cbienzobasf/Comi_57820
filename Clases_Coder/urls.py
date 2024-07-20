@@ -17,8 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Clases_Coder.views import saludo, dia_de_hoy
-from .views import saludo, muestra_nombre
-from .views import saludo, muestra_nombre, probando_template
+from .views import saludo, muestra_nombre, probando_template,probando_template2,  usando_loader, curso
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +25,7 @@ urlpatterns = [
     path('diaDeHoy/', dia_de_hoy),
     path('muestra_nombre/<nombre>/', muestra_nombre),
     path('probando_template/', probando_template),
+    path('probando_template2/', probando_template2),
+    path('usando_loader/', usando_loader),
+    path('curso/<nombre>/<numero>/', curso)
 ]
